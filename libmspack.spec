@@ -1,11 +1,11 @@
 Summary:	A library for Microsoft compression formats
 Name:		libmspack
-Version:	0.4alpha
-Release:	2
+Version:	0.5alpha
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.cabextract.org.uk/libmspack/%{name}-%{version}.tar.gz
-# Source0-md5:	1ab10b507259993c74b4c41a88103b59
+# Source0-md5:	3aa3f6b9ef101463270c085478fda1da
 URL:		http://www.cabextract.org.uk/libmspack/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -46,6 +46,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -62,7 +64,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc doc/*.{html,css,png}
 %attr(755,root,root) %{_libdir}/libmspack.so
-%{_libdir}/libmspack.la
 %{_includedir}/mspack.h
 %{_pkgconfigdir}/*.pc
 
