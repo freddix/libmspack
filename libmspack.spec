@@ -1,7 +1,7 @@
 Summary:	A library for Microsoft compression formats
 Name:		libmspack
 Version:	0.5alpha
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.cabextract.org.uk/libmspack/%{name}-%{version}.tar.gz
